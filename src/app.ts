@@ -1,4 +1,9 @@
 import sum from "./sum";
 
-// tslint:disable-next-line:no-console
-console.log( sum(1, 2) );
+let n = 0;
+
+setInterval(() => {
+  n = sum(n, 1);
+  // tslint:disable-next-line:no-console
+  console.log( n );
+}, 1000);

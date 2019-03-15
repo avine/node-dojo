@@ -4,8 +4,15 @@
   "description": "Let's play with NodeJS",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node src/app.ts",
+    "start": "ts-node src/app.ts",
+    "start:watch": "nodemon --watch src --exec ts-node src/app.ts",
+
     "build": "tsc",
+    "build:watch": "tsc --watch",
+
+    "start:dist": "node dist/app.js",
+    "start:dist:watch": "nodemon --watch dist dist/app.js",
+
     "test": "jest"
   },
   "repository": {

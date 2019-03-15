@@ -12,7 +12,10 @@
       "preLaunchTask": "npm: build",
       "outFiles": [
           "${workspaceFolder}/dist/**/*.js"
-      ]
+      ],
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "console": "integratedTerminal"
     }
   ]
 }
