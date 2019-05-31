@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Socket Client</title>
+  </head>
+  <body>
+    Socket Client...
+    <script>
+      var socket = null;
+
+      try {
+        socket = new WebSocket('ws://127.0.0.1:1337');
+        console.log('Go!');
+      } catch (exception) {
+        console.error(exception);
+      }
+
+      socket.onerror = function(error) {
+        console.error(error);
+      };
+
+      socket.onopen = function(event) {
+        console.log('Connexion établie.');
+
+        this.onclose = function(event) {
+          console.log('Connexion terminé.');
+        };
+
+        this.onmessage = function(event) {
+          console.log('Message:', event.data);
+        };
+
+        this.send('Hello world!');
+      };
+    </script>
+  </body>
+</html>

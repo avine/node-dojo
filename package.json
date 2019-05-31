@@ -6,13 +6,10 @@
   "scripts": {
     "start": "ts-node src/app.ts",
     "start:watch": "nodemon --watch src --exec ts-node src/app.ts",
-
     "build": "tsc",
     "build:watch": "tsc --watch",
-
     "start:dist": "node dist/app.js",
     "start:dist:watch": "nodemon --watch dist dist/app.js",
-
     "test": "jest"
   },
   "repository": {
@@ -34,5 +31,8 @@
     "ts-node": "^8.0.3",
     "tslint": "^5.14.0",
     "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "sha1": "^1.1.1"
   }
 }
